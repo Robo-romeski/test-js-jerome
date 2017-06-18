@@ -3,6 +3,7 @@ import movies from './movies'
 
 
 export function getPopularMovies () {
+  console.log(movies);
   //
   // movies contains the results of two API requests
   //
@@ -21,5 +22,3 @@ export function getPopularMovies () {
     movies: combinedResults
   }
 }
-
-

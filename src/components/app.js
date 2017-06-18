@@ -7,7 +7,7 @@ export function App(props) {
     <main>
       <h1>Welcome to the Doorsteps Movies!</h1>
       <GetMoviesBtn />
-      <MoviesContainer />
+      <MoviesContainer props={props}/>
     </main>
   )
 }

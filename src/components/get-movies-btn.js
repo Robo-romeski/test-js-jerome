@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { getPopularMovies } from '../state/actions'
 
-class GetMoviesBtn extends React.Component {
+class GetMoviesBtn extends Component {
   constructor (props) {
     super(props)
   }
