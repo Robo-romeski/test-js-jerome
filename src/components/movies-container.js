@@ -10,9 +10,9 @@ export function MoviesContainer(props) {
       <div className="imgDiv" style={{backgroundImage: 'url(' + m.image + ')', minHeight: '200px'}}>
       </div>
       <div className="Media-body">
-
         <h1>{m.title}</h1>
         <p><strong>Price: ${m.price}</strong></p>
+        <p><strong>Year: {m.releaseYear}</strong></p>
       </div>
         </div>
       )}

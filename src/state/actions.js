@@ -1,28 +1,32 @@
 import moment from 'moment'
 import movies from './movies'
 
+// movies contains the results of two API requests
+// 1. combine the results of these requests
+let moviesOne = movies[0];
+let moviesTwo = movies[1];
+let allMovies = moviesOne.concat(moviesTwo);
+
+// 2. each movie object in the results needs a releaseYear attribute added
+
+allMovies.forEach((obj)=> {
+  let year = moment(obj.releaseDate, "YYYY-MM-DD").year();
+  obj.releaseYear = year;}
+)
+
+// 3. sort the results FIRST by year THEN by title
+let allMoviesYearSorted = allMovies.sort((a, b)=> a.releaseYear - b.releaseYear );
+//
+console.log(allMoviesYearSorted);
+//
+let allMoviesReady = allMoviesYearSorted.sort();
+//
+console.log(allMoviesReady);
 
 export function getPopularMovies () {
-  let moviesOne = movies[0];
-  let moviesTwo = movies[1];
-  const allMovies = moviesOne.concat(moviesTwo);
-  console.log('AllMovies Dem', allMovies);
-  // state = allMovies;
-  console.log('nfl films', movies);
-  // console.log('supposed to be new state', state);
-  console.log('from action.js (in getPopularMovies)', movies);
-  //
-  // movies contains the results of two API requests
-  //
+  console.log(allMovies);
 
-  //
-  // 1. combine the results of these requests
-  // 2. sort the results FIRST by year THEN by title
-  // 3. each movie object in the results needs a releaseYear attribute added
-  //    this is used in src/components/movies-list.js line 25
-  //
-
-  const combinedResults = []
+  const combinedResults = allMoviesReady;
 
   return {
     type: 'GET_MOVIES_SUCCESS',
