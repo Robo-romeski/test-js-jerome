@@ -12,7 +12,7 @@ export function MoviesContainer(props) {
       <div className="Media-body">
 
         <h1>{m.title}</h1>
-        <strong>Price: ${m.price}</strong>
+        <p><strong>Price: ${m.price}</strong></p>
       </div>
         </div>
       )}

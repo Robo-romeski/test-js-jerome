@@ -1,76 +1,35 @@
-// $media-cutoff: 600px;
-//
-// body {
-//   background-color: lightgrey;
-// }
-//
-// ul {
-//   list-style: none;
-// }
-//
-// @media screen and (min-width: $media-cutoff){
-// .Media {
-//   display: flex;
-//   align-items: flex-start;
-//   margin: 20px;
-//   background-color: white;
-// }
-//
-// .Media-figure {
-//   margin-right: 1em;
-//   max-width: 100%;
-//   max-height: 100%;
-// }
-//
-// .Media-body {
-//   flex: 1;
-// }
-//
-// .imgDiv {
-//   position: relative;
-//   float: left;
-//   min-width:  200px;
-//   min-height: 200px;
-//   background-position: 50% 50%;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   }
-// }
-//
-// @media screen and (max-width: $media-cutoff){
-//
-//   .Media {
-//     display: flex;
-//     align-items: flex-start;
-//     margin: 20px;
-//     background-color: yellow;
-//   }
-//
-//   .Media-figure {
-//     margin-right: 1em;
-//     max-width: 100%;
-//     max-height: 100%;
-//   }
-//
-//   .Media-body {
-//     flex: 1;
-//   }
-//
-//   .imgDiv {
-//     position: relative;
-//     min-width:  200px;
-//     min-height: 200px;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     }
-//
-// }
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
 body{
-  background-color:lightgrey; 
+  background-color:lightgrey;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 ul{
   list-style: none;
+}
+
+button{
+border: none;
+padding: 10px 10px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+-webkit-transition-duration: 0.6s; /* Safari */
+transition-duration: 0.6s;
+cursor: pointer;
+border-radius: 20px;
+}
+.button {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #ffffff;
 }
 
 .Media{
@@ -78,10 +37,12 @@ ul{
   display: block;
   background: white;
   overflow: auto;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .imgDiv{
-  width: 50%;
+  width: 30%;
   height: 100%;
   display: inline-block;
   float: left;
@@ -95,14 +56,28 @@ ul{
   width: 50%;
   display: block;
   float: left;
+    h1 , p {
+      padding-left: 10px;
+    }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
 
-  .imgDiv, .Media-body{
+  .imgDiv{
     display: block;
     float: none;
     width: 100%;
+  }
+  .Media-body{
+    display: block;
+    float: none;
+    width: 100%;
+    h1{
+      font-size: 28px;
+    }
+    p{
+      font-size: 19px;
+    }
   }
 
   .Media{

@@ -9,8 +9,10 @@ function movies (state = [], action) {
   console.log('nfl films', films);
   console.log('supposed to be new state', state);
   switch (action.type) {
-    case 'GET_MOVIES_SUCCESS':
+    case 'GET_MOVIES_SUCCESS':{
+      console.log(action)
       return action.movies
+    }
 
     default:
       return state
