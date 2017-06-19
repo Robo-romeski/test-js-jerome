@@ -8,23 +8,18 @@ let moviesTwo = movies[1];
 let allMovies = moviesOne.concat(moviesTwo);
 
 // 2. each movie object in the results needs a releaseYear attribute added
-
 allMovies.forEach((obj)=> {
   let year = moment(obj.releaseDate, "YYYY-MM-DD").year();
   obj.releaseYear = year;}
 )
 
 // 3. sort the results FIRST by year THEN by title
-let allMoviesYearSorted = allMovies.sort((a, b)=> a.releaseYear - b.releaseYear );
-//
-console.log(allMoviesYearSorted);
-//
-let allMoviesReady = allMoviesYearSorted.sort();
-//
-console.log(allMoviesReady);
+// let allMoviesYearSorted = allMovies.sort();
+
+let allMoviesReady = allMoviesYearSorted.sort((a, b)=> a.releaseYear - b.releaseYear );
 
 export function getPopularMovies () {
-  console.log(allMovies);
+  console.log(allMoviesReady);
 
   const combinedResults = allMoviesReady;
 
